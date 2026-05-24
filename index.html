@@ -14,8 +14,8 @@
 
   <div class="overlay" id="overlay"></div>
 
-  <nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <button class="mobile-menu__close" id="menuClose" aria-label="Close menu">
+  <nav class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="menuClose">
       <svg xmlns="http://www.w3.org/2000/svg" width="1.75rem" height="1.75rem" viewBox="0 0 32 32">
         <g fill="#1d2537" fill-rule="evenodd">
           <path d="M2.1 0L32 29.9l-2.1 2.1L0 2.1z"/>
@@ -35,7 +35,7 @@
   <div class="container">
     <header class="header">
       <a href="#" class="logo">W.</a>
-      <button class="hamburger" id="menuToggle" aria-label="Open menu">
+      <button class="hamburger" id="menuToggle">
         <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="1.0625rem" viewBox="0 0 40 17">
           <g fill="#1d2537" fill-rule="evenodd">
             <rect width="40" height="3" rx="0"/>
@@ -126,14 +126,12 @@
     function openMenu() {
       mobileMenu.classList.add('is-open');
       overlay.classList.add('is-visible');
-      mobileMenu.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
     }
 
     function closeMenu() {
       mobileMenu.classList.remove('is-open');
       overlay.classList.remove('is-visible');
-      mobileMenu.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
     }
 
